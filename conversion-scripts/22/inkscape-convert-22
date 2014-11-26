@@ -1,3 +1,5 @@
 #!/bin/bash
 
 find -name "*.svg" -exec inkscape --export-png={}.png --export-dpi=72 --export-background-opacity=0 -w 22 -h 22 --without-gui {} \;
+
+mv_sed 's/\.svg\./\./' *.png
